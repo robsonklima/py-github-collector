@@ -1,0 +1,5 @@
+SELECT       r.id, c.message, r.description, c.date
+FROM         repositories r
+INNER JOIN   commits c
+ON           r.id = c.repository_id
+ORDER BY     c.date DESC;
